@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+transformers
+torch
+scikit-learn
+joblib
+sentencepiece
+beautifulsoup4 
+requests
+python-dotenv
+streamlit

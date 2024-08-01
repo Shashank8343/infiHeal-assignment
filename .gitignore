@@ -1,0 +1,50 @@
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+.env
+
+# Virtual environment
+env/
+venv/
+ENV/
+ENV.bak/
+
+# Docker
+*.dockerignore
+Dockerfile
+docker-compose.yml
+
+# IDE and editor directories
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Application-specific
+*.sqlite3
+db.sqlite3
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Streamlit
+.streamlit/
+
+# Local environment settings
+*.local
+*.conf
+
+# Compiled Python files
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
