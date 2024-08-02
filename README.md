@@ -215,8 +215,14 @@ Upload Files: Upload app.py, requirements.txt, and Dockerfile to the Space.
 
 Push Code:
 
-git add .
-git commit -m "Deploy app to Hugging Face Spaces"
-git push
+``` git init
+
+```git status
+
+```git add .
+
+```git commit -m "Deploy app to Hugging Face Spaces"
+
+```git push
 
 
