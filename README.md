@@ -188,54 +188,53 @@ Streamlit: Runs a separate server to handle user interface interactions and visu
 
 ## Creating the Dockerfile
 
-```bash
 FROM python:3.10
-```bash
+
 WORKDIR /app
-```bash
+
 COPY requirements.txt .
-```bash
+
 RUN pip install --no-cache-dir -r requirements.txt
-```bash
+
 COPY . .
-```bash
+
 EXPOSE 8501
-```bash
+
 CMD ["streamlit", "run", "app.py"]
 
 Alternatively, we can directly use FastApi server with uvicorn.
 
-```bash
+
 FROM python:3.10-slim
 
-```bash
+
 WORKDIR /app
 
-```bash
+
 COPY requirements.txt .
 
-```bash
+
 RUN pip install --no-cache-dir -r requirements.txt
 
-```bash
+
 COPY . .
 
 # Expose the port FastAPI will run on
-```bash
+
 EXPOSE 9000
 
 # Set environment variable for articles directory
-```bash
+
 ENV ARTICLES_DIR /app/articles
 
 # Command to run the FastAPI application with Uvicorn
-```bash
+
 CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "9000", "--reload"]
 
-## ```bash
+## 
 docker build -t mental_health_chatbot .
 
-## ```bash
+## 
 docker run -p 80:80 mental_health_chatbot
 
 ### Deployment
@@ -246,10 +245,10 @@ Upload Files: Upload app.py, requirements.txt, and Dockerfile to the Space.
 
 Push Code:
 
-```
+```bash
 git init
 
-```
+```bash
 git status
 
 ```bash
