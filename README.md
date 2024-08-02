@@ -215,7 +215,8 @@ Upload Files: Upload app.py, requirements.txt, and Dockerfile to the Space.
 
 Push Code:
 
-``` git init
+```bash
+git init
 
 ```git status
 
