@@ -263,6 +263,6 @@ git push origin main
 
 ![HuggingFace Spaces Deployed](app/screenshots/hf-spaces.png)
 
-![RAG HuggingFace Spaces](app/screenshots/hf-spc1.png)
+![RAG HuggingFace Spaces](app/screenshots/hf-spc-1.png)
 
 ![Classification check Huggingface spaces](app/screenshots/hfspc-clas.png)
