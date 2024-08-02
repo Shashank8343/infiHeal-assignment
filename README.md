@@ -188,24 +188,55 @@ Streamlit: Runs a separate server to handle user interface interactions and visu
 
 ## Creating the Dockerfile
 
-
+```bash
 FROM python:3.10
-
+```bash
 WORKDIR /app
-
+```bash
 COPY requirements.txt .
-
+```bash
 RUN pip install --no-cache-dir -r requirements.txt
-
+```bash
 COPY . .
-
+```bash
 EXPOSE 8501
-
+```bash
 CMD ["streamlit", "run", "app.py"]
 
-## docker build -t mental_health_chatbot .
+Alternatively, we can directly use FastApi server with uvicorn.
 
-## docker run -p 80:80 mental_health_chatbot
+```bash
+FROM python:3.10-slim
+
+```bash
+WORKDIR /app
+
+```bash
+COPY requirements.txt .
+
+```bash
+RUN pip install --no-cache-dir -r requirements.txt
+
+```bash
+COPY . .
+
+# Expose the port FastAPI will run on
+```bash
+EXPOSE 9000
+
+# Set environment variable for articles directory
+```bash
+ENV ARTICLES_DIR /app/articles
+
+# Command to run the FastAPI application with Uvicorn
+```bash
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "9000", "--reload"]
+
+## ```bash
+docker build -t mental_health_chatbot .
+
+## ```bash
+docker run -p 80:80 mental_health_chatbot
 
 ### Deployment
 Deploying to Hugging Face Spaces
@@ -218,12 +249,16 @@ Push Code:
 ```bash
 git init
 
-```git status
+```bash
+git status
 
-```git add .
+```bash
+git add .
 
-```git commit -m "Deploy app to Hugging Face Spaces"
+```bash
+git commit -m "Deploy app to Hugging Face Spaces"
 
-```git push
+```bash
+git push
 
 
