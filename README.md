@@ -245,19 +245,20 @@ Upload Files: Upload app.py, requirements.txt, and Dockerfile to the Space.
 
 Push Code:
 
-```bash
 git init
 
-```bash
 git status
 
-```bash
+git clone https://Shashank8343:<hf_accessToken>@huggingface.co/spaces/Shashank8343/infiHeal-shashank-asg
+
+cd infiHeal-shashank-asg
+
+git pull origin main
+
 git add .
 
-```bash
-git commit -m "Deploy app to Hugging Face Spaces"
+git commit -m "Your commit message"
 
-```bash
-git push
+git push origin main
 
 
